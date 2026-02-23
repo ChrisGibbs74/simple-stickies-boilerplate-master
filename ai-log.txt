@@ -1,0 +1,43 @@
+PROMPT:
+“How do I temporarily render two test notes in Vue using mounted() so the UI shows immediately?”
+RESPONSE:
+Use the mounted() lifecycle hook to set the stickies array to two example objects so the v-for loop renders notes right away.
+WHAT I USED / CHANGED:
+I copied the structure and adjusted the example text to match my project and confirmed it worked with my template.
+PROMPT:
+“Help me implement addStickie() and deleteStickie(id) in Vue for my sticky notes app.”
+RESPONSE:
+Create a new note object with an id and empty text, push it into the stickies array, and use filter() to remove a note by id.
+WHAT I USED / CHANGED:
+I kept the logic but adapted it to my existing app.js file and tested that buttons correctly triggered the methods.
+PROMPT:
+“My notes are not showing up in the browser even though my files are in the same folder. What should I check?”
+RESPONSE:
+Check script order, Vue mounting target, and confirm app.js is loading using console logs or alerts.
+WHAT I USED / CHANGED:
+I followed the debugging steps and discovered the issue was related to how the page was being opened, then verified the fix in the browser.
+PROMPT:
+“How do I save and load notes automatically using localStorage with a deep watcher in Vue?”
+RESPONSE:
+Use JSON.stringify() when saving, JSON.parse() when loading, call loadFromStorage() in mounted(), and add a deep watcher on the stickies array to auto-save changes.
+WHAT I USED / CHANGED:
+I implemented the methods and renamed variables to match my project, then tested persistence by refreshing the page.
+
+PROMPT:
+“How do I implement a clearAll() function that confirms deletion and removes saved notes from localStorage?”
+RESPONSE:
+Use confirm() to prompt the user, then clear the array and call localStorage.removeItem() with the storage key.
+WHAT I USED / CHANGED:
+I integrated the method into my existing methods block and confirmed that both the UI and storage were cleared.
+PROMPT:
+“Explain simply why the character counter updates automatically when typing in a textarea with v-model.”
+RESPONSE:
+Because v-model updates the data property in real time, Vue’s reactivity detects the change and updates anything depending on that value, like the character count.
+WHAT I USED / CHANGED:
+I rewrote the explanation in simpler terms and connected it directly to my sticky notes example.
+PROMPT:
+“What does deep: true do in a Vue watcher and why is it needed for nested objects?”
+RESPONSE:
+deep: true tells Vue to watch changes inside objects and arrays, not just the array reference, so edits to note text also trigger the watcher.
+WHAT I USED / CHANGED:
+I summarized the explanation in my own words and related it to editing text in notes triggering auto-save.
